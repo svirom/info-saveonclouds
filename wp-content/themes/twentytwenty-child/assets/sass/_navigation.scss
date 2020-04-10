@@ -1,0 +1,124 @@
+/* navigation */
+
+.main-header {
+  .navbar {
+    height: 135px;
+
+    @include respond-to('xl') {
+      height: 92px;
+      background: rgba(0,0,0,0.05);
+    }
+  }
+  .navbar-brand {
+    img {
+      max-width: 104px;
+
+      @include respond-to('xl') {
+        max-width: 80px;
+      }
+    }
+  }
+  .navbar-toggler {
+    position: relative;
+    width: 30px;
+    height: 24px;
+    border: 0;
+    outline: none;
+  }
+  .navbar-collapse {
+    @include respond-to('xl') {
+      position: absolute;
+      top: 90px;
+      left: 0px;
+      width: 100%;
+      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.15);
+      background: #F5F6F6;
+      z-index: 10000;
+    }
+  }
+}
+
+.header-nav {
+  @include respond-to('xl') {
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+  .nav-item {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .nav-link {
+    color: $main-color;
+
+    &:hover,
+    &:active {
+      color: lighten($main-color, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+
+.navbar-login {
+  @include respond-to('xl') {
+    text-align: center;
+  }
+  .btn-lp {
+    padding: 0.45rem 2.3rem;
+    border-radius: 12px;
+  }
+  .btn-link {
+    color: $main-color;
+    font-weight: 600;
+  }
+}
+
+/* mobile opener button */
+.nav-opener {
+  position: absolute;
+  width: 30px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  border-radius: 0px;
+  background: transparent;
+
+  &:before,
+  &:after,
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 0px;
+    background: $main-color;
+    @include transition(all, 0.3s);
+  }
+
+  &:before {
+    content: '';
+    top: 11px;
+  }
+
+  &:after {
+    content: '';
+    top: 22px;
+  }
+}
+.navbar-toggler[aria-expanded="true"] {
+  .nav-opener {
+    height: 24px;
+
+    span {
+      opacity: 0;
+    }
+    &:before {
+      top: 11px;
+      @include transform(rotate(45deg));
+    }
+    &:after {
+      top: 11px;
+      @include transform(rotate(-45deg));
+    }
+  }
+}

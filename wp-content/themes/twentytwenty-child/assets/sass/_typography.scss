@@ -1,0 +1,53 @@
+/* typography */
+body {
+  font-family: $main-font;
+  color: $main-color;
+  overflow-x: hidden;
+}
+
+h1, .h1 {
+  @include font(2.5rem, 800, 1.35);
+
+  @include respond-to('sm') {
+    font-size: 2rem;
+  }
+}
+h2 {
+  @include font(2.25rem, 800, 1.2);
+
+  @include respond-to('sm') {
+    font-size: 1.75rem;
+  }
+}
+h3 {
+  @include font(1.25rem, 700, 1.2);
+
+  &.prices-title {
+    @include font(1.5625rem, 500, 1.2);
+
+    &.prices-business-title {
+      color: #F47960;
+    }
+  }
+}
+h4 {
+  margin-bottom: 0.75rem;
+  @include font(1rem, 700, 1.25);
+}
+.subtitle {
+  @include font(1.125rem, 400, 1.83);
+}
+label {
+  @include font(1.25rem, 600, 1);
+
+  @include respond-to('xl') {
+    font-size: 1rem;
+  }
+}
+.contact-subtitle {
+  @include font(1.125rem, 500, 1.22);
+  color: rgba($main-color, 0.8);
+}
+.pricing-bold {
+  @include font(1rem, 600, 1.5);
+}

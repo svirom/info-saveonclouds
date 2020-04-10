@@ -1,0 +1,16 @@
+/*
+Theme Name: Twenty Twenty Child
+Description: Twenty Twenty Child Theme
+Author: svirom
+Template: twentytwenty
+Version: 1.0.0
+Text Domain: twentytwenty-child
+*/
+
+/* Custom CSS goes after this line */
+html {
+  font-size: 100%;
+}
+.main-header .navbar-toggler {
+  background-color: transparent;
+}

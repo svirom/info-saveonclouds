@@ -1,0 +1,16 @@
+// breakpoints
+$breakpoints: (
+  'sm': (max-width: 575px),
+  'md': (max-width: 767px),
+  'lg': (max-width: 991px),
+  'xl': (max-width: 1199px)
+) !default;
+
+// used fonts
+$main-font: 'Montserrat', sans-serif;
+
+// colors
+$main-color: #31456A;
+$btn-color: #12AF96;
+$second-color: #ffffff;
+$active-color: #11A088;
