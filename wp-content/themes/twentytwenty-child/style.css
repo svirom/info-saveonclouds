@@ -11,6 +11,74 @@ Text Domain: twentytwenty-child
 html {
   font-size: 100%;
 }
+h1, h2, h3, h4, h5, h6, .faux-heading {
+  letter-spacing: normal;
+}
 .main-header .navbar-toggler {
   background-color: transparent;
+}
+@media (min-width: 700px) {
+  .footer-widgets {
+    width: auto;
+  }
+}
+.logo-footer a {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (max-width: 575px) {
+  .logo-footer a {
+    margin-right: 0;
+  }
+  .logo-footer img {
+    margin: 0 auto;
+  }
+}
+.main-footer {
+  color: #31456A;
+  letter-spacing: normal;
+}
+.main-footer p,
+.main-footer li {
+  line-height: 1.93;
+}
+.main-footer li {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+.main-footer li:last-child {
+  margin-bottom: 0;
+}
+.main-footer li a {
+  color: #31456A;
+  font-weight: 400;
+}
+.main-footer .copyright p {
+  line-height: 2.36;
+}
+.main-footer .widget {
+  margin-top: 0;
+}
+.main-footer .widget p {
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.main-footer .widget .widget-title {
+    margin: 0 0 0.75rem;
+}
+.main-footer .widget ul.menu {
+  padding-left: 0;
+}
+@media (min-width: 576px) {
+  .main-footer .widget ul.menu {
+    padding-left: 3rem;
+  }
+  .main-footer .widget-right .widget ul.menu {
+    padding-left: 0;
+  }
+}
+.main-footer .widget-right .widget:first-of-type {
+  padding-top: 1.5rem;
 }
