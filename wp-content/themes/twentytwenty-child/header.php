@@ -47,7 +47,6 @@
 							wp_nav_menu(
 								array(
 									'container'  => '',
-									// 'items_wrap' => '%3$s',
 									'theme_location' => 'primary',
 									'menu_class' => 'navbar-nav ml-auto header-nav',
 									'walker' => new Primary_Walker_Nav_Menu()
@@ -55,10 +54,22 @@
 							);
 
 						} 
-						?>
+					?>
 						<div class="navbar-login ml-4 my-4 my-xl-0">
-							<a href="#" class="btn btn-lp mr-4"><?php _e('Sign Up', 'twentytwenty-child'); ?></a>
-							<a href="#" class="btn btn-link"><?php _e('Login', 'twentytwenty-child'); ?></a>
+						<?php
+						if ( has_nav_menu( 'login_child' ) ) {
+
+							wp_nav_menu(
+								array(
+									'container'  => '',
+									'items_wrap' => '%3$s',
+									'theme_location' => 'login_child',
+									'walker' => new Login_Walker()
+								)
+							);
+
+						} 
+						?>
 						</div>
 					</div>
 				</nav>

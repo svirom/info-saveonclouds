@@ -24,8 +24,8 @@
                 <?php echo get_custom_logo(); ?>
               </div>
               
-              <?php if ( is_active_sidebar( 'sidebar-child-1' ) ) {
-                dynamic_sidebar( 'sidebar-child-1' );
+              <?php if ( is_active_sidebar( 'sidebar-child-left' ) ) {
+                dynamic_sidebar( 'sidebar-child-left' );
               } ?>
 
             </div>
@@ -33,8 +33,8 @@
 
           <div class="col-12 col-sm-6 col-md-4">
 
-            <?php if ( is_active_sidebar( 'sidebar-child-2' ) ) {
-                dynamic_sidebar( 'sidebar-child-2' );
+            <?php if ( is_active_sidebar( 'sidebar-child-center' ) ) {
+                dynamic_sidebar( 'sidebar-child-center' );
               } ?>
 
           </div>
@@ -43,18 +43,20 @@
             <div class="row">
               <div class="col-12 pt-4 widget-right">
                 
-                <?php if ( is_active_sidebar( 'sidebar-child-3' ) ) {
-                  dynamic_sidebar( 'sidebar-child-3' );
+                <?php if ( is_active_sidebar( 'sidebar-child-right' ) ) {
+                  dynamic_sidebar( 'sidebar-child-right' );
                 } ?>
                 
               </div>
             </div>
           </div>
-
         </div>
+
         <div class="row copyright mt-4 mt-md-0">
-          <div class="col">
-            <p>Copyright 2020 Save On Clouds by CloudWare Pty Ltd. | All Rights Reserved</p>
+          <div class="col-12">
+            <?php if ( is_active_sidebar( 'sidebar-copyright' ) ) {
+              dynamic_sidebar( 'sidebar-copyright' );
+            } ?>
           </div>
         </div>
       </div>

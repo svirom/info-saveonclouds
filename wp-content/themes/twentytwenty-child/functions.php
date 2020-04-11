@@ -27,16 +27,14 @@ function change_logo_class( $html ) {
 /* add walker class */
 require 'classes/walker-menu-primary.php';
 
-/**
- * Register widget areas.
- */
+/* register widget areas */
 function child_sidebar_registration() {
 
 	// Footer child #1.
 	register_sidebar(	
 		array(
-			'name'        => __( 'Footer child #1', 'twentytwenty-child' ),
-			'id'          => 'sidebar-child-1',
+			'name'        => __( 'Footer left', 'twentytwenty-child' ),
+			'id'          => 'sidebar-child-left',
 			'description' => '',
 			'before_title'  => '<h4 class="widget-title">',
 			'after_title'   => '</h4>',
@@ -48,8 +46,8 @@ function child_sidebar_registration() {
 	// Footer child #2.
 	register_sidebar(	
 		array(
-			'name'        => __( 'Footer child #2', 'twentytwenty-child' ),
-			'id'          => 'sidebar-child-2',
+			'name'        => __( 'Footer center', 'twentytwenty-child' ),
+			'id'          => 'sidebar-child-center',
 			'description' => '',
 			'before_title'  => '<h4 class="widget-title">',
 			'after_title'   => '</h4>',
@@ -61,8 +59,8 @@ function child_sidebar_registration() {
 	// Footer child #3.
 	register_sidebar(	
 		array(
-			'name'        => __( 'Footer child #3', 'twentytwenty-child' ),
-			'id'          => 'sidebar-child-3',
+			'name'        => __( 'Footer right', 'twentytwenty-child' ),
+			'id'          => 'sidebar-child-right',
 			'description' => '',
 			'before_title'  => '<h4 class="widget-title">',
 			'after_title'   => '</h4>',
@@ -71,6 +69,34 @@ function child_sidebar_registration() {
 		)
 	);
 
-}
+	// Footer copyright.
+	register_sidebar(	
+		array(
+			'name'        => __( 'Footer copyright', 'twentytwenty-child' ),
+			'id'          => 'sidebar-copyright',
+			'description' => '',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+			'before_widget' => '<div class="widget %2$s">',
+			'after_widget'  => '</div>',
+		)
+	);
 
+}
 add_action( 'widgets_init', 'child_sidebar_registration' );
+
+/* remove container div in widget menus */
+add_filter( 'widget_nav_menu_args', function ( $nav_menu_args, $nav_menu, $args, $instance ) 
+{
+    $nav_menu_args['container'] = false;
+    return $nav_menu_args; 
+}, 10, 4 );
+
+/* register navigation login menu */
+function child_menus() {
+	$locations = array(
+		'login_child'  => __( 'Login Menu', 'twentytwenty-child' )
+	);
+	register_nav_menus( $locations );
+}
+add_action( 'init', 'child_menus' );

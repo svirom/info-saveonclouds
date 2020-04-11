@@ -14,13 +14,11 @@ html {
 h1, h2, h3, h4, h5, h6, .faux-heading {
   letter-spacing: normal;
 }
+.main-header {
+  letter-spacing: normal;
+}
 .main-header .navbar-toggler {
   background-color: transparent;
-}
-@media (min-width: 700px) {
-  .footer-widgets {
-    width: auto;
-  }
 }
 .logo-footer a {
   display: block;
@@ -33,6 +31,11 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
   }
   .logo-footer img {
     margin: 0 auto;
+  }
+}
+@media (min-width: 700px) {
+  .footer-widgets {
+    width: auto;
   }
 }
 .main-footer {
@@ -54,9 +57,6 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
   color: #31456A;
   font-weight: 400;
 }
-.main-footer .copyright p {
-  line-height: 2.36;
-}
 .main-footer .widget {
   margin-top: 0;
 }
@@ -71,6 +71,9 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
 .main-footer .widget ul.menu {
   padding-left: 0;
 }
+.main-footer .widget-right .widget:first-of-type {
+  padding-top: 1.5rem;
+}
 @media (min-width: 576px) {
   .main-footer .widget ul.menu {
     padding-left: 3rem;
@@ -79,6 +82,8 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
     padding-left: 0;
   }
 }
-.main-footer .widget-right .widget:first-of-type {
-  padding-top: 1.5rem;
+.main-footer .copyright .widget p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  line-height: 2.36;
 }
