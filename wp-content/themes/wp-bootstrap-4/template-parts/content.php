@@ -68,7 +68,7 @@
 	<!-- /.card-body -->
 
 	<?php if ( 'post' === get_post_type() ) : ?>
-		<footer class="entry-footer card-footer text-muted">
+		<footer class="entry-footer card-footer">
 			<?php wp_bootstrap_4_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>

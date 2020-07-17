@@ -351,13 +351,21 @@ body.custom-background .wp-bp-main-content .col-md-8 { background: #f8f9fa; padd
 	color: #31456A;
 }
 
-.home.blog .post-thumbnail {
+.blog .post-thumbnail {
 	max-width: 200px;
 }
 
-.home.blog .entry-summary .wp-block-image img {
+.blog .entry-summary .wp-block-image img {
 	max-width: 220px;
 }
+
+.entry-summary a {
+	color: #31456A;
+}
+
+.entry-summary .btn-lp.btn-prices {
+	color: #fff;
+} 
 
 html {
   font-size: 100%;
@@ -476,4 +484,18 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
 .widget_yikes_easy_mc_widget .widget-title {
 	font-size: 1.5rem;
 	font-weight: 700;
+}
+
+.card {
+	border: 1px solid #31456A;
+	border: 1px solid rgba(49, 69, 106, 0.05);
+}
+.card-footer {
+	background-color: rgba(49, 69, 106, 0.05);
+}
+.card-footer .cat-links a,
+.card-footer .tags-links a,
+.card-footer .cat-links .badge,
+.card-footer .tags-links .badge {
+	background-color: #fff;
 }
