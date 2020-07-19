@@ -505,7 +505,6 @@ h1, h2, h3, h4, h5, h6, .faux-heading {
 }
 
 .card {
-	border: 1px solid #31456A;
 	border: 1px solid rgba(49, 69, 106, 0.05);
 }
 .card-footer {
